@@ -1,27 +1,20 @@
 .total {
+    display: grid;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    display: grid;
     background-color: beige;
-    padding: 20px; /* Added padding for better spacing */
 }
+
 
 h1 {
     color: firebrick;
-    text-align: center;
-    font-size: 2.5em; /* Larger text for desktop */
 }
 
 b {
     color: darkslategrey;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
 
 button {
     padding: 15px;
@@ -29,97 +22,67 @@ button {
     margin-right: 30px;
     border: none;
     background-color: beige;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: lightgray;
+
+.rock {
+    margin-right: 30px;
 }
+
+
+.paper {
+    margin-right: 30px;
+}
+
+
+.scissor {
+    margin-right: 0;
+}
+
 
 .score,
 .bot_score {
     font-size: 1.5em;
     border: none;
     background-color: beige;
-    text-align: center;
-    color: indigo;
-    display: block;
-    margin-top: 20px;
 }
+
+.score {
+    color: indigo;
+}
+
+.bot_score {
+    color: midnightblue;
+}
+
 
 .result {
     padding: 50px;
     border: none;
-    font-size: 1.5em;
+    font-size: 1em;
     background-color: beige;
-    text-align: center;
 }
+
 
 .restart-btn {
-    margin-left: 140px;
-    padding: 10px;
+    margin-left: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: chartreuse;
     border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.restart-btn:hover {
-    background-color: lightgreen;
+    font-size: 1.5em;
 }
 
 
-@media (max-width: 768px) {
-    .total {
-        padding: 10px; 
-    }
-
-    h1 {
-        font-size: 2em; 
-    }
-
-    .buttons {
-        flex-direction: column; 
-    }
-
-    button {
-        font-size: 2em; 
-        margin-right: 0;
-        margin-bottom: 15px; 
-        width: 80%; 
-    }
-
-    .score, .bot_score {
-        font-size: 1.2em;
-    }
-
-    .result {
-        font-size: 1.3em; 
-    }
-
-    .restart-btn {
-        width: 80%; 
-        margin-top: 20px;
-    }
-}
-
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5em; 
-    }
-
-    .score, .bot_score {
-        font-size: 1em;
-    }
-
-    button {
-        font-size: 1.8em; 
-    }
-
-    .restart-btn {
-        width: 90%; 
-        font-size: 1em;
-    }
+.start {
+    margin-left: 140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: chartreuse;
+    border-radius: 10px;
+    font-size: 2em;
 }
