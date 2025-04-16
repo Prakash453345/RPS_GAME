@@ -1,20 +1,28 @@
+/* Global Styles */
 .total {
-    display: grid;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    display: grid;
     background-color: beige;
+    padding: 20px; /* Added padding for better spacing */
 }
-
 
 h1 {
     color: firebrick;
+    text-align: center;
+    font-size: 2.5em; /* Larger text for desktop */
 }
 
 b {
     color: darkslategrey;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 
 button {
     padding: 15px;
@@ -22,67 +30,97 @@ button {
     margin-right: 30px;
     border: none;
     background-color: beige;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-
-.rock {
-    margin-right: 30px;
+button:hover {
+    background-color: lightgray;
 }
-
-
-.paper {
-    margin-right: 30px;
-}
-
-
-.scissor {
-    margin-right: 0;
-}
-
 
 .score,
 .bot_score {
     font-size: 1.5em;
     border: none;
     background-color: beige;
-}
-
-.score {
+    text-align: center;
     color: indigo;
+    display: block;
+    margin-top: 20px;
 }
-
-.bot_score {
-    color: midnightblue;
-}
-
 
 .result {
     padding: 50px;
     border: none;
-    font-size: 1em;
+    font-size: 1.5em;
     background-color: beige;
+    text-align: center;
 }
-
 
 .restart-btn {
-    margin-left: 45px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 140px;
+    padding: 10px;
     background-color: chartreuse;
     border-radius: 10px;
-    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.restart-btn:hover {
+    background-color: lightgreen;
+}
 
-.start {
-    margin-left: 140px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: chartreuse;
-    border-radius: 10px;
-    font-size: 2em;
+/* Media Query for Tablets and Mobile Devices */
+@media (max-width: 768px) {
+    .total {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Reduced font size for mobile */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+    }
+
+    button {
+        font-size: 2em; /* Adjust button size for mobile */
+        margin-right: 0;
+        margin-bottom: 15px; /* Added margin-bottom for spacing */
+        width: 80%; /* Make buttons take more width on small screens */
+    }
+
+    .score, .bot_score {
+        font-size: 1.2em;
+    }
+
+    .result {
+        font-size: 1.3em; /* Increased font size for better readability on small screens */
+    }
+
+    .restart-btn {
+        width: 80%; /* Make the restart button take more space */
+        margin-top: 20px;
+    }
+}
+
+/* Media Query for Small Mobile Devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Further reduce font size for very small screens */
+    }
+
+    .score, .bot_score {
+        font-size: 1em; /* Adjust score font size */
+    }
+
+    button {
+        font-size: 1.8em; /* Further adjust button size for very small screens */
+    }
+
+    .restart-btn {
+        width: 90%; /* Make restart button even larger on small screens */
+        font-size: 1em;
+    }
 }
